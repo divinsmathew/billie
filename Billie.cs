@@ -25,7 +25,7 @@ namespace Billie
                 pow--;
                 rem = "Z";
             }
-            return pow != 0? ToLetters(pow) + rem : rem;
+            return pow != 0 ? ToLetters(pow) + rem : rem;
         }
 
         public string GenerateBreakdown()
@@ -240,7 +240,7 @@ namespace Billie
             }
             catch (Exception e)
             {
-                
+
             }
         }
 
