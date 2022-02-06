@@ -65,7 +65,7 @@ namespace Billie
                 {
                     MakeCell(worksheet.Cell(ToLetters(columnAlphaCount) + "1"), true, true, XLColor.FromArgb(200, 218, 247));
                     worksheet.Range(ToLetters(columnAlphaCount) + "1:" + ToLetters(columnAlphaCount) + "3").Merge();
-                    worksheet.Cell(ToLetters(columnAlphaCount) + "1").Value = "Tax (" + Parameters.TaxPercentage + "%)";
+                    worksheet.Cell(ToLetters(columnAlphaCount) + "1").Value = "Tax* (" + Parameters.TaxPercentage + "%)";
 
                     columnAlphaCount++;
                 }
@@ -153,7 +153,6 @@ namespace Billie
 
                 if (TaxExcemptedItems.Count > 0)
                 {
-                    worksheet.Cell(ToLetters(columnAlphaCount + 1) + "1").Value = "Tax* (" + Parameters.TaxPercentage + "%)";
                     worksheet.Range("A" + (i + 5).ToString() + ":" + ToLetters(columnAlphaCount) + (i + 5).ToString()).Merge();
                     ActiveCell = worksheet.Cell("A" + (i + 5).ToString());
                     ActiveCell.Style.Font.SetItalic(true);
