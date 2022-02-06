@@ -116,8 +116,8 @@ namespace Billie
             billieData.PurchaseDate = DateTime.Now;
             billieData.Currency = "Rs.";
 
-            string json = JsonConvert.SerializeObject(billieData);
-            File.WriteAllText("json.txt", json);
+            //string json = JsonConvert.SerializeObject(billieData);
+            //File.WriteAllText("json.txt", json);
             //MessageBox.Show(json);
 
             //BillieData readData = JsonConvert.DeserializeObject<BillieData>(File.ReadAllText("json.txt"));
